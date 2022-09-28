@@ -1,0 +1,38 @@
+{
+  "name": "luxon-to-dayjs",
+  "version": "0.0.0",
+  "description": "Migrate luxon to dayjs",
+  "repository": "git@github.com:JounQin/luxon-to-dayjs.git",
+  "author": "JounQin <admin@1stg.me>",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "yarn@1.22.19",
+  "scripts": {
+    "lint": "eslint --cache .",
+    "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
+    "test": "TZ=UTC tap ./test/*.js"
+  },
+  "devDependencies": {
+    "@1stg/lib-config": "^10.3.0",
+    "cron-parser": "^4.6.0",
+    "dayjs": "^1.11.5",
+    "sinon": "^10.0.0",
+    "tap": "^16.0.1",
+    "yarn-deduplicate": "^6.0.0"
+  },
+  "commitlint": {
+    "extends": "@1stg"
+  },
+  "eslintConfig": {
+    "extends": "@1stg",
+    "rules": {
+      "no-magic-numbers": "off",
+      "sonarjs/no-duplicate-string": "off"
+    }
+  },
+  "eslintIgnore": [
+    "coverage",
+    "!/.*.js"
+  ],
+  "prettier": "@1stg/prettier-config"
+}
